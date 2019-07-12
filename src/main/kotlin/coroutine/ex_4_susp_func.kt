@@ -6,9 +6,14 @@ import kotlinx.coroutines.runBlocking
 
 fun main(args: Array<String>) = runBlocking {
     val job = launch {
-        delay(1000L)
-        println("World!")
+        doWorld()
     }
     println("Hello,")
     job.join()
+}
+
+// suspendはcoroutine内で使われる
+private suspend fun doWorld() {
+    delay(1000L)
+    println("World!")
 }
