@@ -1,19 +1,30 @@
 package delegation
 
 fun main() {
-    val view = View()
-    val screen = Screen(view)
-    screen.show()
+    val view: Showable = View()
+    val customView: Showable = CustomView()
+    Screen(view).show()
+    Screen(customView).show()
 }
 
-class View {
-    fun show() {
+open class View : Showable {
+    override fun show() {
         println("View.show()")
     }
 }
 
-class Screen(private val view: View) {
-    fun show() {
-        view.show()
+class CustomView : View() {
+    override fun show() {
+        println("CustomView.show()")
     }
+}
+
+class Screen(private val showable: Showable) : Showable {
+    override fun show() {
+        showable.show()
+    }
+}
+
+interface Showable {
+    fun show()
 }
