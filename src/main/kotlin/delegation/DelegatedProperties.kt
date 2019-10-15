@@ -9,7 +9,7 @@ class Example {
 
 class Delegate {
     operator fun getValue(thisRef: Any?, property: KProperty<*>): String {
-        return "$thisRef, thank you for delegating '${property.name}' to me!"
+        return property.name
     }
 
     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: String) {
