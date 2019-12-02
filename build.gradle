@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.31'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.61'
 }
 
 group 'net.kwmt27'
@@ -13,7 +13,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
     // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.3.31'
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.3.61'
     testImplementation "com.google.truth:truth:1.0"
 
 }
