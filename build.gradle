@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.0'
 }
 
 group 'net.kwmt27'
@@ -11,9 +11,9 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2"
     // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.4.21'
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.7.0'
     testImplementation "com.google.truth:truth:1.0"
     implementation "io.reactivex.rxjava2:rxjava:2.2.10"
 }
