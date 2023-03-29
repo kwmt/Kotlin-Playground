@@ -27,7 +27,7 @@ fun main() = runBlocking {
 private fun flowFrom(watchHoge: WatchHoge): Flow<Int> = callbackFlow {
     val callback = object : OnChangeListener {
         override fun onChange(i: Int) {
-            offer(i)
+//            offer(i)
         }
     }
     watchHoge.listener = callback
